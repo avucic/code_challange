@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+dir = File.expand_path('./lib', __dir__)
+$LOAD_PATH.unshift(dir)
+
+require 'pizzabot'
+
+class String
+  def red
+    "\e[31m#{self}\e[0m"
+  end
+
+  def green
+    "\e[32m#{self}\e[0m"
+  end
+
+  def brown
+    "\e[33m#{self}\e[0m"
+  end
+end
+
+input = ARGV[0]
+
+puts "\nProcessing input #{input} ...\n".brown
+
+abort('Missing input string'.red) unless input
+
+begin
+  response = Pizzabot.directions(input)
+  puts "Result: #{response.green}"
+rescue InvalidPathError => e
+  abort "Invalid path: #{input}. It should be in format, for ex. 5x5 (0,1) (2,3)".red
+rescue InvalidPlaneSizeError => e
+  abort 'Plane dimension is not compatible with given coordinates'.red
+else
+  abort e.to_s.red
+end
+
+exit
