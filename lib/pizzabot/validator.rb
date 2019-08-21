@@ -8,6 +8,7 @@ module Pizzabot
     def apply(path)
       lx, ly = path.points.last
       px, py = path.plane.to_a
+
       raise InvalidPlaneSizeError if lx > px || ly > py
 
       path

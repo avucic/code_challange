@@ -16,7 +16,7 @@ bundle exec rspec
 
 ## Getting stared
 
-Run command from the root of the directory
+Run command from the root of the directorj
 
 ```bash
 ./pizzabot '5x3 (1,3) (4,4)'
@@ -24,7 +24,7 @@ Run command from the root of the directory
 ## Notes
 
 Durning development few questions came up related to the business model itself or
-it's misunderstanding like:
+it's misunderstanding:
 
 1. Purpose of the plane size:
     ```ruby
@@ -32,7 +32,7 @@ it's misunderstanding like:
     ```
     Plane size can be calculated from given coordinates using largest `x` and `y` values, or not ?
 
-2. Multiple similar points like should give multiple D (drop)?
+2. Multiple similar points should give multiple D (drop)?
     ```ruby
     '5x5 (1,3) (1,3) (1,3)'
     ```
