@@ -39,7 +39,7 @@ module Pizzabot
       end
     end
 
-    # build directions string
+    # build directions string from initial position/point 0,0
     def directions
       @directions ||= begin
         points.map(&:to_a).inject(['', [0, 0]]) do |(s, prev), el|

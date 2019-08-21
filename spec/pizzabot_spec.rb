@@ -4,6 +4,7 @@ describe Pizzabot do
   describe '#directions' do
     let(:sample) { '5x5 (1,3) (2,4)' }
 
+    # to make Rspec happy
     around(:each) do |example|
       old = Pizzabot.instance_variable_get(:@handlers)
       Pizzabot.instance_variable_set(:@handlers, [])
@@ -47,7 +48,7 @@ describe Pizzabot do
         )
       end
 
-      it 'should add D for zero point drop' do
+      it 'should add D for zero point' do
         sample = '5x5 (0, 0)'
         expect(Pizzabot.directions(sample)).to eq(
           'D'

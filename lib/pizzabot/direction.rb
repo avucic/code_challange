@@ -9,7 +9,7 @@ module Pizzabot
       @p1 && @p2 || raise(ArgumentError, 'Missing point')
     end
 
-    # if points are the same id will print D. Otherwise will build direction string
+    # if points are the same it will print D. Otherwise will build direction string
     def to_s
       drop? ? 'D' : build
     end
@@ -27,6 +27,7 @@ module Pizzabot
       y1 = @p1[1]
       y2 = @p2[1]
 
+      # diff between prev and next x and y values
       xdiff = x1 - x2
       ydiff = y1 - y2
 
