@@ -10,10 +10,10 @@ describe Pizzabot::Validator do
   # plane size is irrelevant (or it is misunderstanding) and can be calculated
   # from given points
   it 'should throw exception if plane is less then largest x or y' do
-    path = Pizzabot::Path.new '5x5 (6, 3)'
+    path = Pizzabot::Path.new '5x5 (6, 3) (2,3)'
     expect { subject.apply(path) }.to raise_error(InvalidPlaneSizeError)
 
-    path = Pizzabot::Path.new '5x5 (4, 6)'
+    path = Pizzabot::Path.new '5x5 (4, 6) (2,3)'
     expect { subject.apply(path) }.to raise_error(InvalidPlaneSizeError)
   end
 end
