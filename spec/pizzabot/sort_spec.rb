@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe Pizzabot::Sort do
+describe Pizzabot::Handlers::Sort do
   it 'should sort points' do
     path = Pizzabot::Path.new '5x5 (1, 3) (4, 4) (0, 2)'
 

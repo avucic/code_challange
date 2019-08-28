@@ -2,9 +2,9 @@
 
 require 'pizzabot/path'
 require 'pizzabot/error'
-require 'pizzabot/validator'
-require 'pizzabot/sort'
 require 'pizzabot/direction'
+require 'pizzabot/handlers/validator'
+require 'pizzabot/handlers/sort'
 
 # The most famous pizza delivery bot :)
 
@@ -30,5 +30,5 @@ module Pizzabot
   end
 end
 
-Pizzabot.use(Pizzabot::Validator)
-Pizzabot.use(Pizzabot::Sort)
+Pizzabot.use(Pizzabot::Handlers::Validator)
+Pizzabot.use(Pizzabot::Handlers::Sort)

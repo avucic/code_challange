@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe Pizzabot::Validator do
+describe Pizzabot::Handlers::Validator do
   it 'should not throw exception if input string is valid' do
     path = Pizzabot::Path.new '5x5 (1, 3) (4, 4)'
     expect { subject.apply(path) }.not_to raise_error
