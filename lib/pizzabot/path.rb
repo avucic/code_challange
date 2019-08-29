@@ -17,8 +17,6 @@ module Pizzabot
   class Path
     PARSE_PATH_REG = /^(\d+x\d+\s)((\(\s?\d+\s?,\s?\d+\s?\)\s?)+)$/.freeze
 
-    attr_writer :points
-
     def initialize(path)
       @path = path
       _, @dimension, @pairs = path.match(Path::PARSE_PATH_REG).to_a
