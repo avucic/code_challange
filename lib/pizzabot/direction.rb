@@ -22,10 +22,7 @@ module Pizzabot
     end
 
     def build
-      x1 = @p1[0]
-      x2 = @p2[0]
-      y1 = @p1[1]
-      y2 = @p2[1]
+      x1, y1, x2, y2 = @p1 + @p2
 
       # diff between prev and next x and y values
       xdiff = x1 - x2
