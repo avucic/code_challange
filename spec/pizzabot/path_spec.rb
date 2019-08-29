@@ -42,6 +42,7 @@ describe Pizzabot::Path do
         '5x5 (5,)',
         '(5,5)',
         '(5,5) (4,3)',
+        '5 x 5 (1 0)',
         '5x5 (1 0) (1'
       ].each do |s|
         expect  do
