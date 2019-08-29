@@ -19,7 +19,7 @@ module Pizzabot
 
     def initialize(path)
       @path = path
-      _, @dimension, @pairs = path.match(Path::PARSE_PATH_REG).to_a
+      _, @dimension, @pairs = path.match(PARSE_PATH_REG).to_a
       @dimension && @pairs || raise(InvalidPathError)
     end
 
