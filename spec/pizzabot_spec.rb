@@ -12,8 +12,8 @@ describe Pizzabot do
       Pizzabot.instance_variable_set(:@handlers, old)
     end
 
-    it 'should return string if there are no handlers' do
-      expect(Pizzabot.directions(sample)).not_to be_empty
+    it 'should return path if there are no handlers' do
+      expect(Pizzabot.directions(sample)).to be_kind_of String
     end
 
     it 'should apply handlers to the input' do
