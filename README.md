@@ -16,7 +16,7 @@ bundle exec rspec
 
 ## Getting stared
 
-Run command from the root of the directorj
+Run command from the root of the directory
 
 ```bash
 ./pizzabot '5x3 (1,3) (4,4)'
