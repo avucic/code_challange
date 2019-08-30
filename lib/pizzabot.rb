@@ -2,7 +2,6 @@
 
 require 'pizzabot/path'
 require 'pizzabot/error'
-require 'pizzabot/direction'
 require 'pizzabot/handlers/validator'
 require 'pizzabot/handlers/sort'
 
