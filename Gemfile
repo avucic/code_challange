@@ -2,10 +2,16 @@
 
 source 'https://rubygems.org'
 
-group :development do
+gem 'grape'
+
+group :development,:test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rake'
   gem 'rspec'
   gem 'rubocop'
+  gem 'rack-test'
+  gem 'shotgun'
 end
+
+

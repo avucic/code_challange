@@ -18,7 +18,7 @@ module Pizzabot
 
     # check if the points are equal
     def drop?
-      @p1.join('') == @p2.join('')
+      @p1.to_s == @p2.to_s
     end
 
     def build

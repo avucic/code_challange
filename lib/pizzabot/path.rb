@@ -9,8 +9,16 @@ module Pizzabot
       [x, y]
     end
 
+    def +(other)
+      to_ary + other.to_ary
+    end
+
     def <=>(another)
       to_ary <=> another.to_ary
+    end
+
+    def to_s
+      to_ary.join('')
     end
   end
 
@@ -40,7 +48,7 @@ module Pizzabot
     # build directions string from initial position/point 0,0
     def directions
       @directions ||= begin
-        points.map(&:to_a).inject(['', [0, 0]]) do |(s, prev), el|
+        points.inject(['', [0, 0]]) do |(s, prev), el|
           [s + Direction.new(prev, el).to_s, el]
         end[0]
       end
