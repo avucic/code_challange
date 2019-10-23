@@ -22,6 +22,7 @@ module Pizzabot
     end
   end
 
+  private_constant :Point
   class Path
     PARSE_PATH_REG = /^(\d+x\d+\s)((\(\s?\d+\s?,\s?\d+\s?\)\s?)+)$/.freeze
 
