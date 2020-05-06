@@ -1,8 +1,9 @@
-
 # Pizzabot
+
 The most famous pizza delivery bot :)
 
 ## Task
+
 The pizza delivery vehicle has to deliver the pizza across multiple locations.
 The task is to create a route with directions for each location.
 
@@ -15,9 +16,9 @@ draw a route using the following labels:
     W - West
     D - Drop
 
- - Mark for each location (coordinate) when vehicle arrive with D representing delivery (drop).
+- Mark for each location (coordinate) when vehicle arrive with D representing delivery (drop).
 
- - Vehicle always starts from location (0x0).
+- Vehicle always starts from location (0x0).
 
 ### Example:
 
@@ -27,14 +28,15 @@ Given input:
 
 Expected Output:
 
-    ENNNDDD
+    ENNNDEEEND
 
 ### Requirement:
 
-  - Create a CLI that is able to parse the given input and display the result.
+- Create a CLI that is able to parse the given input and display the result.
 
 ### Bonus:
-  - Shortest path to cover all coordinates.
+
+- Shortest path to cover all coordinates.
 
 ## Installation
 
@@ -55,24 +57,28 @@ Run command from the root of the directory
 ```bash
 ./pizzabot '5x3 (1,3) (4,4)'
 ```
+
 ## Notes
 
 Durning development few questions came up related to the business model itself or
 it's misunderstanding:
 
 1. Purpose of the plane size:
-    ```ruby
-    '5x5 (1,3) (4,4)'
-    ```
-    Plane size can be calculated from given coordinates using largest `x` and `y` values, or not ?
+
+   ```ruby
+   '5x5 (1,3) (4,4)'
+   ```
+
+   Plane size can be calculated from given coordinates using largest `x` and `y` values, or not ?
 
 2. Multiple similar points should give multiple D (drop)?
-    ```ruby
-    '5x5 (1,3) (1,3) (1,3)'
-    ```
-    will produce
 
-    ```ruby
-    'ENNNDDD'
-    ```
+   ```ruby
+   '5x5 (1,3) (1,3) (1,3)'
+   ```
 
+   will produce
+
+   ```ruby
+   'ENNNDDD'
+   ```
